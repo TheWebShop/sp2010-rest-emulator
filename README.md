@@ -19,7 +19,7 @@ This repository comes with an included example project, a derivative of the [Dat
 
  1. `npm install bower -g` you will need Twitter's [Bower][bower home] package manager for this example.
  2. `cd public` all files here are served as static content, just like normal media is in a SP2010 (eg: .html, .css, .js, etc.).
- 3. `bower install` to fetch the vendor libraries we've used ([jQuery][jQuery home], [DataTables][dt home].
+ 3. `bower install` to fetch the vendor libraries we've used ([jQuery][jQuery home], [DataTables][dt home]).
 
 You should now be able to access the example project from [http://localhost:8080/][local root]
 
