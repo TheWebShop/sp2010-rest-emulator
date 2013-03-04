@@ -1,6 +1,8 @@
 # SharePoint 2010 REST emulation in nodejs
 
-A bare bones implementation of the [SharePoint 2010 REST interface][rest intro] designed to help in developing rich web interfaces without requiring a live SP environment. For detailed installation and usage instructions please see the [documentation](http://thewebshop.github.com/sp2010-rest-emulator/).
+A bare bones implementation of the [SharePoint 2010 REST interface][rest intro] designed to help in developing rich web interfaces without requiring a live SP environment. For detailed installation and usage instructions please see the [wiki](http://thewebshop.github.com/sp2010-rest-emulator/).
+
+## [Documentation][docs]
 
 ## Installation
 
@@ -65,6 +67,7 @@ The following filters and operators have been implemented int he simulation so f
 </table>
 
 [bower home]: http://twitter.github.com/bower/
+[docs]: https://github.com/TheWebShop/sp2010-rest-emulator/wiki
 [dt ex1]: http://www.datatables.net/release-datatables/examples/data_sources/js_array.html
 [dt home]: http://www.datatables.net/
 [jQuery home]: http://jquery.com/
