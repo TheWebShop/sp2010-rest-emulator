@@ -1,0 +1,28 @@
+{
+  "name": "node-sp-rest",
+  "version": "0.1.0",
+  "description": "SharePoint 2010 REST simulation in nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sinetheta/node-sp-rest.git"
+  },
+  "keywords": [
+    "nodejs",
+    "sharepoint",
+    "rest",
+    "json"
+  ],
+  "author": "Kevin Attfield",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "aa81434504fae4cc891e71fc1cc6c46817b538fa",
+  "dependencies": {
+    "express": "~3.1.0",
+    "mongoose": "~3.5.7",
+    "underscore": "~1.4.4"
+  }
+}
