@@ -1,0 +1,20 @@
+body {
+  background-color: #DFDFDF;
+  color: white;
+  font-family: Century Gothic, Arial;
+  font-size: 16px;
+  padding: 40px 0;
+}
+
+a {
+  color: #FF377C;
+}
+
+header {
+  margin: 40px 0;
+}
+
+.container {
+  width: 796px;
+  margin: 0 auto;
+}

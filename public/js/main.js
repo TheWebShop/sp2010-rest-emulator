@@ -1,29 +1,21 @@
-$.getJSON('/_vti_bin/listData.svc/Browsers', function(data) {
-
-  // Translate the returned data into something DataTables can digest, an array of arrays
-  var browsers = $.map(data.d.results, function(record) {
-
-    // we have to double wrap in order to return an array
-    // since $.map flattens arrays by default http://api.jquery.com/jQuery.map/
-    return [[
-      record.RenderingEngine,
-      record.Browser,
-      record.Platforms,
-      record.Version,
-      record.CSSGrade
-    ]];
+(function(){
+  $(function() {
+    /*var $lists = $('#lists');
+    $.getJSON('/_vti_bin/listData.svc', function(data) {
+      var lists = data.d.EntitySets;
+      $.each(lists, function(i, name) {
+        $('<li><a href="/_vti_bin/listData.svc/' + name + '">' + name + '</a></li>')
+          .appendTo($lists);
+      });
+    });*/
+    
+    $('#demo-root').on('click', function() {
+      $.getJSON('/_vti_bin/listData.svc', function(data) {
+        $('#result-root').text( JSON.stringify(data, null, 2) );
+        console.log(data);
+        Prism.highlightAll();
+        $('#demo-root').text('Ya way!');
+      });
+    });
   });
-
-  // This is an example of using DataTables with a javascript source
-  // http://www.datatables.net/release-datatables/examples/data_sources/js_array.html
-  $('#example').dataTable({
-    'aaData': browsers,
-    'aoColumns': [
-      { 'sTitle': 'Rendering Engine' },
-      { 'sTitle': 'Browser' },
-      { 'sTitle': 'Platform(s)' },
-      { 'sTitle': 'Version', 'sClass': 'center' },
-      { 'sTitle': 'Grade', 'sClass': 'center' }
-    ]
-  });
-});
+}(jQuery));

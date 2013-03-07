@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>DataTables Demo</title>
-        <meta name="description" content="DataTables zero configuration example">
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>DataTables Demo</title>
+  <meta name="description" content="DataTables zero configuration example">
+  <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="components/datatables/media/css/jquery.dataTables.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/flat-ui.css">
+  <link rel="stylesheet" href="components/prism/prism.css">
+  <link rel="stylesheet" href="css/main.css"></head>
+<body>
 
-        <header>
-          <div class="container">
-            <h1>DataTables</h1>
-            <p>From Ajax request to Sharepoint 2010 RESTful interface</p>
-          </div>
-        </header>
+  <div class="container">
+    <header class="well" id="page-header">
+      <h1>SharePoint 2010 REST emulator</h1>
+      <p>Using <a hreaf="http://nodejs.org/">node.js</a> and <a href="http://expressjs.com/">express 3.0</a>.</p>
+    </header>
 
-        <div class="container">
-          <table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>
-        </div>
+    <h2>About</h2>
 
-        <script src="components/jquery/jquery.min.js"></script>
-        <script src="components/datatables/media/js/jquery.dataTables.js"></script>
-        <script src="js/main.js"></script>
+    <p>The emulator is a node.js web server which serves static files (like this page) just like you would expect, but also responds to REST calls in the same way SharePoint does.</p>
+    <p><button id="demo-root" class="btn">No way!</button></p>
 
-    </body>
+    <div class="row">
+
+      <div class="span6">
+        <pre class="example-code"><code id="source-root" class="language-javascript">$.getJSON('/_vti_bin/listData.svc', function(data) {
+   $('#result-root').text( JSON.stringify(data, null, 2) );
+});</code></pre>
+      </div>
+
+      <div class="span6">
+        <pre class="example-result"><code id="result-root" class="language-javascript"></code></pre>
+      </div>
+
+    </div>
+
+    <p>Here we've used jQuery to make an ajax request for a directory of all available lists <code>'/_vti_bin/listData.svc'</code>. Then we've taken the response, turned it into a string and "<a href="https://github.com/douglascrockford/JSON-js/blob/master/json2.js#L22">beautified</a>" it a bit, then piped the results out.</p>
+   
+    <hr>
+
+    <h2>Documentation</h2>
+
+    <p>For installation instructions and a full list of supported features please check out the <a href="https://github.com/TheWebShop/sp2010-rest-emulator/wiki">documentation</a>.</p>
+
+    <hr>
+
+
+    <h2>Example Projects</h2>
+
+    <ul>
+      <li><a href="/examples/datatables/index.html">Basic DataTables</a></li>
+      <li><a href="/examples/gallery/index.html">Carousel for a "Photo Library"</a></li>
+    </ul>
+  </div>
+
+
+  <script src="components/jquery/jquery.min.js"></script>
+  <script src="components/prism/prism.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
 </html>

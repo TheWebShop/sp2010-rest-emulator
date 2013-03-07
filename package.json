@@ -22,7 +22,6 @@
   "gitHead": "aa81434504fae4cc891e71fc1cc6c46817b538fa",
   "dependencies": {
     "express": "~3.1.0",
-    "mongoose": "~3.5.7",
     "underscore": "~1.4.4"
   }
 }

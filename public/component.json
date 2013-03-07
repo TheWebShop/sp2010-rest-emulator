@@ -2,6 +2,7 @@
   "name": "node-sp-rest",
   "version": "0.1.0",
   "dependencies": {
-    "datatables": "~1.9.4"
+    "jquery": "~1.9.1",
+    "prism": "latest"
   }
 }

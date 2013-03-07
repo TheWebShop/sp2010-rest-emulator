@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>DataTables Demo</title>
+  <meta name="description" content="DataTables zero configuration example">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/awkward.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Image Gallery</h1>
+      <p>Stored in SP2010 picture gallery, accessed through REST, displayed with <a href="http://www.awkwardgroup.com/sandbox/awkward-showcase-a-jquery-plugin/">Awkward Showcase</a>.
+      </p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="showcase" class="showcase"></div>
+  </div>
+
+  <script id="showcase-slide-template" type="text/x-handlebars-template">    
+    <div class="showcase-slide">
+      <div class="showcase-content">
+        <div class="showcase-content-wrapper">
+          <img src="{{src}}" alt="01" width="{{width}}" height="{{height}}" />
+          {{#if alt}}
+          <p class="static-caption">{{alt}}</p>  
+          {{/if}}
+        </div>
+      </div>
+      <div class="showcase-thumbnail">
+        <img src="{{thumb}}" alt="{{alt}}" />
+        <div class="showcase-thumbnail-cover"></div>
+      </div>
+    </div>
+  </script>
+
+  <script src="components/handlebars.js/dist/handlebars.js"></script>
+  <script src="components/jquery/jquery.min.js"></script>
+  <script src="js/jquery.aw-showcase.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
